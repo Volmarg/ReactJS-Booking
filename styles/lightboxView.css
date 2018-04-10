@@ -1,0 +1,406 @@
+/* GENERAL */
+*{
+  position:relative;
+
+
+
+  box-sizing: border-box;
+  padding:10px;
+  margin:3px;
+
+  font-family: "Jockey One",sans-serif;
+}
+
+
+/* ANIMATIONS */
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.fadeOut{
+  animation-name: fadeOut;
+  animation-duration: 500ms;
+}
+
+.lightboxBack{
+/*  background-color:rgba(255,255,255,0.8);
+  width:100%;
+  height:100%;
+  position:absolute;
+
+  padding:0px;
+  margin:0px;
+  z-index:5*/
+}
+
+#lightboxSuper{
+
+}
+
+#lightboxSuper, #lightboxCaller, .lightboxWrapper{
+  margin-top:0px !important;
+  padding-top:0px;
+}
+
+#lightboxCaller{
+  margin: 0;
+  padding: 0;
+  /*top: 20px;*/
+  width: 100%;
+  z-index: 5;
+  /*position: fixed;*/
+
+}
+
+input{
+  color:rgba(0, 0, 0, 0.8) !important;
+}
+/* MAIN BOXES*/
+
+#lightboxCaller .lightboxWrapper{
+  display:flex;
+  justify-content: space-around;
+
+  min-height:700px;
+  /*position: absolute;*/
+  width: 100%;
+  z-index: 1;
+
+  top:-30px;
+
+  animation-name: fadeIn;
+  animation-duration: 500ms;
+}
+
+#lightboxCaller .lightbox{
+  width:100%;
+  height:100%;
+  align-self:center;
+
+  background-color: rgba(255,255,255,0.8);
+}
+
+#lightboxCaller .smallRoomInfo{
+
+min-height:150px;
+
+}
+
+#lightboxCaller .moreAboutRoom{
+
+  min-height:80px;
+  text-align:justify;
+
+  display:flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+  background-color: #4f88b8;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+#lightboxCaller .moreAboutRoom .center{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.eventDescription{
+  align-self: center;
+}
+
+#lightboxCaller .moreAboutRoom .left, #lightboxCaller .moreAboutRoom .right{
+  background-color: #447dad;
+}
+
+#lightboxCaller .moreAboutRoom .left p, #lightboxCaller .moreAboutRoom .right p{
+  font-family: 'Shadows Into Light', cursive;
+}
+
+
+#lightboxCaller .moreAboutRoom .left ul{
+  list-style-type:none;
+}
+
+#lightboxCaller .moreAboutRoom .left p{
+  word-break: break-all;
+  max-width:915px;
+}
+
+.roomInfoLightbox{
+  display:flex;
+}
+
+.roomInfoLightbox .right{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.roomInfoLightbox ul{
+  font-family: 'Bad Script';
+  letter-spacing: 1px;
+  padding:0px;
+}
+
+#lightboxCaller .left ul label,.right ul label{
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255,0.9);
+  letter-spacing:1px;
+  border:1px solid rgba(0,0,0, 0.15) !important;
+}
+
+#lightboxCaller .left p,.right p{
+  font-size:18px;
+  color:white;
+
+  text-align:center;
+}
+
+#lightboxCaller .left ul input, .right ul input{
+    border:1px solid rgba(0,0,0, 0.15) !important;
+}
+
+#lightboxCaller .singleRoomInfoList{
+  color:white;
+}
+
+
+#lightboxCaller .singleRoomInfoList> li{
+  border:1px solid rgba(0,0,0, 0.15) !important;
+}
+
+#lightboxCaller .moreAboutRoom .right ul{
+  list-style-type: none;
+}
+
+#lightboxCaller .moreAboutRoom .right img{
+  width:300px;
+  opacity:0.9;
+  filter: grayscale(100%);
+}
+
+#lightboxCaller .moreAboutRoom .right img:hover{
+  opacity:1;
+  filter: none;
+  transition:200ms linear;
+}
+
+#lightboxCaller.moreAboutRoom.right ul{
+  list-style-type:none;
+}
+
+.moreAboutRoom> .roomButtons{
+  align-self: center;
+}
+
+#lightboxCaller label{
+  display:inline-block;
+  width:150px;
+}
+
+#lightboxCaller input{
+  width:200px;
+  background-color:#A9CCE9;
+  box-shadow:2px 2px 2px rgba(0,0,0,0.2);
+}
+
+#lightboxCaller .roomButtons> ul{
+  display:flex;
+  list-style-type:none;
+  justify-content:space-around;
+  flex-wrap:wrap;
+}
+
+#lightboxCaller .roomButtons> ul li{
+  width:150px;
+  text-align:center;
+  box-shadow:2px 2px 2px rgba(0,0,0,0.4);
+  color:rgba(0,0,0,0.70);
+}
+#lightboxCaller .messageBox{
+  display:flex;
+  justify-content: space-around;
+}
+
+#lightboxCaller .singleUser{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+
+  letter-spacing: 2px;
+  font-size: 17px;
+  color: white;
+}
+
+#lightboxCaller .singleUser> span{
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#lightboxCaller .remove{
+  color:#e31e2f;
+  font-size:19px;
+  cursor: pointer;
+
+  opacity:0.7;
+}
+
+.singleUser .remove span,.singleUser .remove {
+    border:none !important;
+}
+
+
+#lightboxCaller .remove:hover{
+    opacity: 1;
+    transition: 200ms linear;
+}
+
+#lightboxCaller .roomName{
+  font-size:20px;
+  color:black;
+}
+
+#lightboxCaller .topDown{
+ background-color: #266498;
+ box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(0, 0, 0, 0.3);
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+}
+
+#lightboxCaller .messageBox{
+  display:none;
+}
+
+.killLightbox{
+  float:right;
+  color:rgba(0,0,0,0.7);
+  font-size:30px;
+
+  z-index:5;
+
+  opacity:1;
+  transition: linear 300ms;
+}
+
+.killLightbox:hover{
+    cursor:pointer;
+    opacity:0.7;
+    transition: linear 300ms;
+}
+
+#lightboxCaller .equipementListing{
+  list-style-type:square !important;
+  line-height: 1px;
+  left:30px;
+}
+
+/* messages */
+.errorsWrapper{
+  background-color:rgb(185, 53, 56);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.errorsWrapper p+p{
+  margin-top: 30px;
+}
+
+.errorMessage{
+  color:white  !important;
+  line-height:1px;
+  letter-spacing:1px;
+}
+
+.succesWrapper{
+  background-color:rgb(154,189,54);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.succesWrapper{
+
+}
+
+.succesWrapper p{
+}
+
+.successMessage{
+  color:white  !important;
+  line-height:1px;
+  letter-spacing:1px;
+  text-align: center;
+  height:10px;
+}
+
+
+.removeWrapper{
+  background-color:rgb(185, 53, 56);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.removedMessage{
+  color:white  !important;
+  line-height:1px;
+  letter-spacing:1px;
+  text-align: center;
+}
+
+.eventDescription{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  flex-direction:column;
+}
+
+.eventDescription > label{
+  width:inherit !important;
+  text-align: center;
+  font-weight:200;
+}
+
+/* TEXTAREA EVENT DESCRIPTION AND ADDING BOOKING */
+.eventDescription > textarea{
+  color:rgba(0,0,0,0.8);
+}
+
+#userAddingDescription{
+  max-width: 420px;
+  width: 100%;
+  height: 161px;
+
+  margin-top:20px;
+
+  border:1px solid rgba(0,0,0, 0.15) !important;
+  background-color:#A9CCE9;
+
+  box-shadow:2px 2px 2px rgba(0,0,0,0.2);
+}
+
+#userAddingTitle{
+  width: 405px;
+  height: 60px;
+
+  border:1px solid rgba(0,0,0, 0.15) !important;
+  background-color:#A9CCE9;
+
+  box-shadow:2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.messageTextArea_Ok, .messageTextArea_Error, .messageBooking_Error, .messageBooking_Ok, .messageTime_Error, .messageTime_Ok{
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(0, 0, 0, 0.3);
+  text-align:center;
+}
+
+.messageTextArea_Ok, .messageBooking_Ok, .messageTime_Ok{
+  background-color:#9abd36;
+}
+
+.messageTextArea_Error, .messageBooking_Error, .messageTime_Error{
+  background-color: rgb(185, 53, 56);
+}
+
+.errorHandlerBooking{
+
+}

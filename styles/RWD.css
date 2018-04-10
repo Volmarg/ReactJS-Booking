@@ -1,0 +1,320 @@
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@media all and (max-width: 500px){
+  /* GENERAL */
+  #root,#root>div, .mainContent, #root>div>section,.mainContent>div{
+    padding:0px !important;
+    margin:0px !important;
+  }
+
+  .slideDown{
+    display:block;
+  }
+
+  .DayPickerInput input{
+    font-size:62px !important;
+  }
+
+  #selectedDay span{
+    margin-left: 86px !important;
+    font-size: 40px;
+  }
+
+  .topNav{
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+
+  .topNav,.datePick{
+    height:100px;
+  }
+
+  .datePick{
+    top:-10px;
+  }
+
+  .moreAboutRoom{
+    font-size:16px;
+  }
+
+  .singleRoomBox .roomButtons,.singleRoomBox p+p {
+    display:none;
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+  }
+
+  /*Filters*/
+
+.filter{
+  background-color: #266498;
+  color:rgba(255,255,255,0.7);
+  top:-90px;
+}
+
+.FilterWrapper{
+  height:150px;
+  margin-top:3px;
+}
+
+.checkboxPlus{
+  top:-60px;
+  left:20px;
+  display: none;
+}
+
+  .filtersBox p{
+    text-align: center;
+    left:10px;
+    font-size: 21px;
+  }
+
+  .filtersBox > ul{
+    top: -38px;
+  }
+
+  .filtersBox input{
+    width:250px !important;
+  }
+
+.filtersBox li+li{
+  display:none;
+}
+
+  .filtersBox{
+    height:200px;
+  }
+
+  .freeNow{
+    height:150px;
+  }
+
+  footer{
+    height:600px;
+  }
+
+  .Hours{
+    display:none
+  }
+/* LIGHTBOX */
+  .roomInfoLightbox .left{
+
+  }
+
+  .killLightbox{
+    top:-30px !important;
+  }
+
+  /* LIGHTBOX REGISTER*/
+    textarea{
+      width:230px !important;
+    }
+
+    .moreAboutRoom .left{
+      width:295px;
+    }
+
+  #lightboxCaller, #lightboxSuper, #lightboxWrapper{
+    padding:0px;
+    margin: 0px;
+  }
+
+  #lightboxCaller .left ul label, .right ul label, #lightboxCaller .left ul input, .right ul input{
+    width:175px;
+  }
+
+  #lightboxCaller .lightboxWrapper{
+    margin:0px;
+    padding:0px;
+    left:0px;
+  }
+
+  #lightboxSuper{
+    /*top:-100px;*/
+  }
+
+  .center> .roomButtons{
+  /*  margin-top:-80px;*/
+  }
+
+  #lightboxCaller .moreAboutRoom{
+    flex-wrap: nowrap !important;
+  }
+
+  .eventDescription{
+
+  }
+
+  form.eventDescription>#userAddingDescription{
+
+  }
+
+}
+@media all and (min-width:400px) and (max-width: 730px){
+  /*C*/
+  #lightboxCaller .moreAboutRoom{
+    display: block;
+  }
+
+  #userAddingTitle{
+    width:330px;
+  }
+  /*R*/
+  .moreAboutRoom>.right>form>ul{
+
+  }
+
+  .moreAboutRoom>.right>form>ul>li{
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+
+  }
+  /*L*/
+  .moreAboutRoom>.left>form>ul{
+
+  }
+
+  .moreAboutRoom>.left form>ul>li{
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+
+  }
+}
+
+@media all and (max-width: 900px){
+
+/* FORMS on reservation */
+
+#lightboxCaller .moreAboutRoom .left, #lightboxCaller .moreAboutRoom .right{
+  width:100%;
+  min-width:300px;
+}
+
+
+/* else */
+
+  .moreAboutRoom{
+    overflow: hidden;
+    flex-direction: column-reverse;
+  }
+
+  #lightboxCaller{
+    /*position: absolute;*/
+  }
+
+  #selectedDay span{
+    margin-left: 130px;
+  }
+
+  .killLightbox{
+    top:-60px !important;
+  }
+
+
+  .Hours{
+    width:450px;
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+  }
+
+  .reservationSlider{
+    width:450px !important;
+    top:63px;
+  }
+/* LIGHTBOX SHOW MORE*/
+
+  #lightboxCaller label{
+    width:200px;
+  }
+
+  #lightboxCaller .lightbox{
+    width:110%;
+  }
+
+  .roomInfoLightbox{
+    display:flex;
+    flex-wrap:wrap;
+    width:300px;
+  }
+
+  .roomInfoLightbox .left p,.roomInfoLightbox .left{
+    font-size:17px !important;
+  }
+
+  #lightboxCaller .moreAboutRoom .right img{
+    height:130px;
+  }
+
+  .moreAboutRoom>img{
+    width:100%;
+    max-width: 500px;
+    align-self: center;
+  }
+
+  .DayPickerInput-OverlayWrapper{
+    left:60px !important;
+    margin-top:0px;
+    padding-top: 0px;
+  }
+}
+
+@media all and (max-width: 1029px){
+  #lightboxSuper .lightboxWrapper > .lightbox > .smallRoomInfo {
+    min-height:75px;
+  }
+
+  .reservationSlider::before{
+    display: none;
+  }
+
+  .Hours{
+    display:none;
+  }
+}
+
+/*,.reservationSlider*/
+@media all and (max-width: 1429px){
+  .smallRoomInfo {
+    min-height: 80px !important;
+  }
+
+  .Hours{
+    width:800px;
+    display: none !important;
+  }
+
+  .reservationSlider{
+    top:10px !important;
+    left:440px !important;
+    width: 770px !important;
+    display: none !important;
+  }
+
+  .reservationSlider::before{
+    font-size:25px;
+    left:-43px !important;
+  }
+}
+
+@media all and (min-width: 1430px){
+  .Hours{
+    width:1200px;
+  }
+}
+
+
+@media all and (max-width: 1507px){
+  .reservationSlider{
+    top:64px;
+    left:40px;
+  }
+
+  .reservationSlider::before{
+    font-size:25px;
+    left:-43px !important;
+  }
+}

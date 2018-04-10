@@ -1,0 +1,456 @@
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
+@import 'https://fonts.googleapis.com/css?family=Rakkas';
+@import 'https://fonts.googleapis.com/css?family=Jockey+One';
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+ @import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeInAdSlide {
+    from {opacity: 0;height:280px;}
+    to {opacity: 1;height:auto;}
+}
+
+/* GENERAL */
+*{
+  position:relative;
+
+  box-sizing: border-box;
+  padding:10px;
+  margin:3px;
+
+
+  font-family: 'Shadows Into Light', cursive;
+
+}
+
+*::placeholder{
+  font-weight: bold;
+}
+
+#root>div>section{
+  margin-bottom:0px;
+  padding-bottom: 0px;
+}
+
+
+/* MAIN BOXES*/
+
+.topNav{
+
+  width:100%;
+  height:200px;
+
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  background-color:#266498;
+
+  box-shadow:2px 2px 2px rgba(0,0,0,0.3), -2px -2px 2px rgba(0,0,0,0.3);
+
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+.navi{
+  min-width:150px;
+
+}
+
+
+
+.mainContent>div{
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent{
+  min-height:600px;
+  width:100%;
+
+  padding-top: 0px;
+  margin-top: 0px;
+
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+}
+
+.footer{
+  width:100%;
+  height:100px;
+
+  display:flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+
+  margin-left:0px;
+  padding-left:0px;
+
+  background-color:#266498;
+  box-shadow:2px 2px 2px rgba(0,0,0,0.3), -2px -2px 2px rgba(0,0,0,0.3);
+
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+
+
+.FilterWrapper{
+  width:100%;
+  height:auto;
+
+  display:flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+
+  margin-left:0px;
+  padding-left:0px;
+  margin-top: 0px;
+  padding-top: 0px;
+
+  background-color:#266498;
+  box-shadow:2px 2px 2px rgba(0,0,0,0.3), -2px -2px 2px rgba(0,0,0,0.3);
+
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+.filtersBox p{
+  align-self: center;
+  font-size:25px;
+  color:rgba(255, 255, 255, 0.84);
+}
+
+.filtersBox{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filtersBox>ul{
+  list-style-type:none;
+  display: flex;
+ flex-wrap: wrap;
+}
+
+.filtersBox>ul>li{
+  display:flex;
+  justify-content: space-between;
+  height:65px;
+
+}
+
+.filtersBox>ul>li input{
+  width:300px;
+  height:45px;
+  background-color:rgba(255,255,255,0.7);
+  border-radius:5px 10px;
+  box-shadow:2px 2px 2px rgba(0,0,0,0.2);
+
+}
+
+.filtersBox>ul>li input::placeholder{
+  font-size:16px;
+  letter-spacing: 2px;
+}
+
+.filtersBox>ul{
+  top:10px;
+}
+
+.filtersBox>ul>li label{
+  width:180px;
+  display:none;
+
+}
+
+.filtersBox input, .filtersBox label{
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border-radius: 7px;
+  height:50px;
+}
+
+.freeNow label{
+  font-size:17px;
+  color:black;
+}
+
+
+.freeNow input{
+
+}
+
+.footer p{
+  color:black;
+  font-size:20px;
+}
+
+.Hours{
+  width:1200px;
+}
+
+.Hours .hoursHolder{
+  width:inherit;
+  display: inline-block;
+  height:50px;
+  top:-20px;
+  z-index:6;
+}
+/* OTHER BOXES */
+
+  /* rooms listing on main page upon opening */
+  .singleRoomBox{
+
+    width:98%;
+    min-height:200px;
+
+    align-self: center;
+
+    margin:3px;
+
+    background-color: #4f88b8;
+    border-radius:1px;
+
+    opacity:1;
+    transition:linear 1200ms;
+
+    animation-name: fadeIn;
+    animation-duration: 2s;
+
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+.singleRoomBox .roomButtons,.singleRoomBox p{
+  display: inline;
+}
+
+  .smallRoomInfo{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+
+  }
+
+.smallRoomInfo> .roomName{
+  font-size:30px;
+  color:black;
+
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#selectedDay>span{
+  display:inline;
+  position: absolute;
+
+  margin-left: 100px;
+  bottom: 30px;
+
+  color:rgb(22,57,86);
+  font-size:50px;
+
+}
+
+  .moreAboutRoom{
+
+    min-height:80px;
+    text-align:justify;
+
+    border-radius:3px;
+
+    color:white;
+    background-color:#447dad;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+
+    margin-top:24px;
+
+    font-size:20px;
+
+    display: flex;
+  }
+
+  .moreAboutRoom>img{
+    float:right;
+    width:400px;
+    padding:0px;
+    border-radius: 3px;
+  }
+
+  .moreAboutRoom p,.moreAboutRoom b{
+    font-family: 'Bad Script';
+    letter-spacing: 1px;
+    padding:0px;
+    font-size: 17px;
+  }
+
+
+
+
+  .roomButtons> ul{
+    display:flex;
+    list-style-type:none;
+    justify-content:space-around;
+    flex-wrap:wrap;
+
+    font-weight: bold;
+    letter-spacing: 0.8px;
+  }
+
+  .roomButtons> ul li{
+    width:150px;
+    background-color:#76A8D1;
+    text-align:center;
+    box-shadow:2px 2px 2px rgba(0,0,0,0.4);
+
+    opacity:1;
+    transition: linear 300ms;
+
+    font-size:17px;
+  }
+
+  .roomButtons> ul li:hover{
+    opacity:0.7;
+    transition: linear 300ms;
+    cursor:pointer;
+  }
+/* RWD */
+
+
+/*Common */
+.borderNshadow{
+  border:1px solid rgb(236,123,35,0.40) !important;
+  box-shadow:1px 2px 2px 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+.SendPass{
+  width:150px;
+  height:50px;
+  background-color:#76A8D1;
+  text-align:center;
+  box-shadow:2px 2px 2px rgba(0,0,0,0.4);
+
+  opacity:1;
+  transition: linear 300ms;
+
+  font-size:17px;
+  border:none;
+  display:block;
+
+  align-self: center;
+}
+
+.slideDown{
+  align-self: center;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+
+
+  width:40px;
+  height:40px;
+
+  top:32px;
+
+  border-radius: 360px;
+  border:1px white solid;
+
+  background-color: rgb(79,136,184);
+
+  z-index: 1;
+}
+
+.slideDown{
+  display:none;
+}
+
+.slideDown>span{
+  top:-13px;
+  text-align: center;
+  padding:0px;
+  margin:0px;
+}
+
+.slideDown:hover{
+  cursor: pointer;
+}
+
+
+/* external */
+#checkboxNew{
+  top:30px;
+  left:-8px;
+  opacity:0;
+  z-index:1;
+
+}
+
+#checkboxNew:hover{
+  cursor: pointer;
+}
+
+.checkboxPlus p{
+  top:-12px;
+  left:30px;
+
+}
+
+.checkboxPlus input{
+  width:23px !important;
+  height:23px !important;
+}
+
+.checkboxPlus {
+	width: auto;
+
+	position: relative;
+}
+
+.checkboxPlus label {
+	cursor: pointer;
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 39px;
+  	left: 0;
+	background: #eee;
+	border:1px solid #ddd;
+}
+
+.checkboxPlus label:after {
+	opacity: 0.2;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 6px;
+	left: 7px;
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+
+	transform: rotate(-45deg);
+}
+
+* Create the hover event of the tick
+*/
+.checkboxPlus label:hover::after {
+ opacity: 0.5;
+}
+
+/**
+* Create the checkbox state for the tick
+*/
+.checkboxPlus input[type=checkbox]:checked + label:after {
+ opacity: 1;
+}

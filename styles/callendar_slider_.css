@@ -1,0 +1,263 @@
+
+/*Callendar*/
+.datePick{
+  min-width:200px;
+  width:300px;
+  display:flex;
+  justify-content: space-around;
+  flex-direction:column;
+
+  text-align:center;
+
+}
+
+.datePick>.holder{
+  font-size:89px;
+  align-self: center;
+}
+
+.DayPickerInput{
+  align-self: center;
+}
+
+.DayPickerInput input{
+  background:none;
+  border:none;
+  text-align:center;
+}
+
+.DayPickerInput-OverlayWrapper{
+  z-index:8;
+  font-size:14px;
+
+  display: flex;
+  justify-content: space-around;
+
+  left:150px;
+}
+
+.DayPicker-NavBar{
+  z-index:2;
+}
+.DayPicker-Caption{
+  padding-bottom:30px;
+}
+
+
+/* SLIDER */
+.Hours .rc-slider-track, .rc-slider-disabled{
+  border-radius:0px !important;
+}
+
+.Hours .rc-slider-track{
+  opacity:1;
+}
+
+.rc-slider-rail{
+  z-index:3;
+}
+
+.Hours .rc-slider-rail{
+  border-radius:0px !important;
+  opacity: 1 !important;
+  background-color:none !important;
+}
+
+
+.Hours .rc-slider-handle{
+  display:none;
+  border-radius:0px;
+
+  background-color:white !important;
+  border:none;
+
+  width:1px;
+  padding:0px;
+
+  margin-left:2px !important;
+  margin-top:3px;
+}
+
+/*start end marks of full line */
+.Hours .rc-slider-step>.rc-slider-dot{
+    display:none;
+
+    width:8px;
+
+    background-color:#ec7b23;
+
+    border:none;
+    border-radius:0px;
+    padding:0px;
+}
+
+.Hours .rc-slider-disabled{
+  background-color: rgba(0,0,0,0) !important;
+}
+
+.Hours .rc-slider-mark-text{
+  color:black;
+  font-size:25px !important;
+
+
+}
+
+.Hours .rc-slider-step,.Hours  .rc-slider-rail,.Hours  .rc-slider-track,.Hours  .rc-slider-handle,.Hours  .rc-slider-step>.rc-slider-dot{
+  height:40px;
+  opacity:0.8;
+  top:-5px;
+  border:1px dashed rgba(255,255,255,0.3);
+}
+
+.Hours .hoursMarks{
+  border:1px rgb(79,136,184) solid;
+  position:absolute;
+  width:1px !important;
+  display:inline-block !important;
+  height:43px;
+  top:-40px;
+  padding:0px;
+}
+
+.lightbox .Hours .hoursMarks{
+  border:1px rgb(38,100,152) solid;
+}
+/* Slider for reservations */
+
+.clockHold{
+  display:inline;
+
+
+}
+
+.reservationSlider::before{
+  content: '🕒';
+  position: absolute;
+  left: -50px;
+  z-index: 666;
+  font-size:30px;
+
+  color:rgb(0,0,0);
+}
+
+.reservationSlider{
+  position:absolute;
+  width: 1180px;
+  right:0px;
+  z-index: 6;
+}
+
+.reservationSlider>span .rc-slider .rc-slider-mark-text,.reservationSlider>span .rc-slider .rc-slider-step{
+  display:none !important;
+}
+
+.reservationSlider>span .rc-slider .rc-slider-track{
+  border-radius:0px !important;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+
+  height: 40px;
+
+  opacity: 0.8;
+
+  top: -5px;
+  margin-left:11px;
+
+  background-color:rgba(189,124,28,0.8);
+}
+
+.reservationSlider>span .rc-slider .rc-slider-handle{
+  padding:0px;
+  margin:0px;
+
+  width:14px;
+  height:40px;
+
+  border-radius:0px;
+  border:none;
+
+  top:-3px;
+
+
+  background-color:rgba(189,124,28,1)
+
+}
+
+.reservationSlider>span .rc-slider{
+  left:-29px;
+}
+
+#slideWrap{
+  height:0px;
+  display:inline-block;
+  margin:0px;
+  padding:0px;
+  top:-15px;
+
+  width:inherit;
+}
+
+    /*KILLING SLIDER*/
+    .killSlider{
+      float:right;
+      color:rgba(0,0,0,0.7);
+      font-size:30px;
+
+      z-index:5;
+
+      opacity:1;
+      transition: linear 300ms;
+      top:-60px;
+    }
+
+    .killSlider:hover{
+        cursor:pointer;
+        opacity:0.7;
+        transition: linear 300ms;
+    }
+
+/* Slider display actuall hour */
+#leftValueHolder, #rightValueHolder{
+  display:inline;
+
+  font-size: 19px;
+  text-align: center;
+
+  padding:0px;
+  margin:0px;
+
+  width:50px;
+
+  position:absolute;
+  top:-52px;
+  margin-left:-42px;
+
+  background-color:white;
+  border:2px black solid;
+  border-radius:4px;
+
+  padding:5px;
+
+}
+
+#leftValueHolder::after, #rightValueHolder::after{
+  content:'';
+
+  padding:3px;
+  height:18px;
+  width: 18px;
+
+  position:absolute;
+  left:13px;
+  top:28px;
+
+  background-color:white;
+
+  transform: rotate(45deg);
+}
+
+#leftValueHolder{
+  left: 23.1481%;
+}
+#rightValueHolder{
+  left: 53.7037%;
+}
